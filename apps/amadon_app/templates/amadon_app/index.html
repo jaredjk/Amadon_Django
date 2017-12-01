@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Amadon</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to Amadon</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Order</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dojo Shirt</td>
+                        <td>$20</td>
+                        <td>
+                            <form action="process" method="post">
+                                {% csrf_token %}
+                                <select name='quantity'>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                </select>
+                                <input type='hidden' name='ProductPrice' value='20'>
+                                <input type='submit' value='Buy'>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dojo Sweater</td>
+                        <td>$30</td>
+                        <td>
+                            <form action="process" method="post">
+                            {% csrf_token %}
+                            <select name='quantity'>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            </select>
+                            <input type='hidden' name='ProductPrice' value='30'>
+                            <input type='submit' value='Buy'>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dojo Cup</td>
+                        <td>$5</td>
+                        <td>
+                            <form action="process" method="post">
+                                {% csrf_token %}
+                                <select name='quantity'>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                </select>
+                                <input type='hidden' name='ProductPrice' value='5'>
+                                <input type='submit' value='Buy'>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

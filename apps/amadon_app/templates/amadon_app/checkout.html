@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Checkout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Thank you for your business!</h2><br>
+            <h4>We charged your card for: ${{request.session.ProductPrice}}</h4><br>
+            <h5>You have ordered {{request.session.quantityOrder}} items so far</h5>
+            <h5>and spent ${{request.session.priceOrder}} with Amadon</h5>
+            <form action="/back">
+                <button type="submit">Back</button>
+            </form>
+        </div>
+    </body>
+</html>
